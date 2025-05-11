@@ -1,8 +1,6 @@
 import streamlit as st
 from db import *
 from admin import *
-import psycopg2 #адаптер PostgreSQL для Python, который позволяет приложениям
-#Python подключаться к базам данных PostgreSQL и взаимодействовать с ними.
 st.set_page_config(layout="wide")
 
 create_table_subjects()
