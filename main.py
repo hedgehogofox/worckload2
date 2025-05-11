@@ -38,7 +38,7 @@ if actions == "Просмотр расписания":
     if select_teacher!='' and select_class=='':
         this_teacher = teachers[teachers['ФИО']==select_teacher]
         #st.write(str(this_teacher['img'].tolist()[0]).replace("\", "/"))
-        st.image(this_teacher['img'].tolist()[0])
+        st.image(this_teacher['img'].str.replace('\', '/').tolist()[0])
         st.header(select_teacher)
         st.subheader('Телефон: '+this_teacher['phone'].tolist()[0])
         if this_teacher['email'].tolist()[0]:
