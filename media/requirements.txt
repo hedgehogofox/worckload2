@@ -1,7 +1,0 @@
-streamlit
-pandas
-sqlite3
-math
-os
-dateutil
-psycopg2
