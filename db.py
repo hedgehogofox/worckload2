@@ -236,7 +236,6 @@ def save_subgroups(subgroups):
         s_start += ') '
         s_end += f')'
         s_start += s_end
-        st.write(s_start)
         cursor.execute(s_start)
     st.success("Изменения успешно сохранены!")
     conn.commit()
