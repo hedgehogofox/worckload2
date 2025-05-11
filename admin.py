@@ -103,7 +103,7 @@ def admin():
                     if file:
                         with open(os.path.join("media", file.name), "wb") as f:
                             f.write(file.getbuffer())
-                        docs[row['id']]=f"media\{file.name}"
+                        docs[row['id']]=f"media/{file.name}"
                 with col7:
                     if row['id'] in docs.keys() and docs[row['id']]!="None" and docs[row['id']]:
                         st.image(docs[row['id']].replace('\\', '/'), width=150)
