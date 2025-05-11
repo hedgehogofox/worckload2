@@ -37,7 +37,8 @@ if actions == "Просмотр расписания":
     select_class = st.selectbox('Классы', ['']+classes['class'].tolist())
     if select_teacher!='' and select_class=='':
         this_teacher = teachers[teachers['ФИО']==select_teacher]
-        st.image(this_teacher['img'].tolist()[0].replace("\", "/"), width=200)
+        st.write(this_teacher['img'].tolist()[0].replace("\", "/"))
+        #st.image(this_teacher['img'].tolist()[0].replace("\", "/"), width=200)
         st.header(select_teacher)
         st.subheader('Телефон: '+this_teacher['phone'].tolist()[0])
         if this_teacher['email'].tolist()[0]:
