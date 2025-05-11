@@ -106,7 +106,7 @@ def admin():
                         docs[row['id']]=f"media\{file.name}"
                 with col7:
                     if row['id'] in docs.keys() and docs[row['id']]!="None" and docs[row['id']]:
-                        st.image(docs[row['id']].replace('\\', '/'), use_column_width="always")
+                        st.image(docs[row['id']].replace('\\', '/'), width=150)
 
             save = st.button('Сохранить фото')
             if save:
